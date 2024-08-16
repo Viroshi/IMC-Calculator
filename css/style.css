@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s ease;
+}
+
+html,
+body {
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: #2b2c30;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #35313b;
+    flex-direction: column;
+}
+
+.notification {
+    position: fixed;
+    top: -15%;
+    opacity: 0;
+    margin-top: 2em;
+    background-color: #ff1457;
+    padding: 1.2em;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    transition: all .5s ease;
+}
+
+.notification.active {
+    top: 0;
+    opacity: 1;
+}
+
+.message {
+    font-weight: 500;
+    color: #fff;
+}
+
+.box-indice {
+    background-color: #990d35;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    height: auto;
+    width: auto;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    color: black;
+}
+
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.informations {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3em;
+}
+
+.informations > div > p {
+    margin-top: 1em;
+    transition: none;
+    font-weight: 500;
+}
+
+
+
+.informations > .numbers > p {
+    color: #fff;
+}
+
+.inputs-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs-buttons > .inputs {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+    flex: 1;
+}
+
+.inputs-buttons > .inputs > input {
+    width: 80%;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    background-color: #35313b;
+    color: #fff;
+    margin-top: 0.5em;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: 500;
+    color: #fff;
+}
+
+.tooltip {
+    color: #35313b;
+    cursor: help;
+}
+
+input.weight {
+    margin-bottom: 1em;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+
+input::placeholder {
+    color: #b9b9b9;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.8em;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #613c4c;
+    color: #fff;
+}
+
+button:active {
+    background-color: #613c4c;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: #332028;
+
+}
+
+button:disabled > button:hover {
+    background-color: #613c4c;
+}
+
+.inputs-buttons > .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+
+@media (max-height: 750px) {
+    .box-indice {
+        display: flex;
+        padding: 2%;
+        height: auto;
+        width: 70%;
+        border-radius: 15px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 5%;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .informations {
+        margin-bottom: 1em;
+        flex: 1;
+        border-right: 1px black solid;
+        justify-content: start;
+    }
+    
+    .informations > div >  p {
+        margin-top: 0.5em;
+    }
+
+    .informations > .numbers {
+        margin-right: 5em;
+    }
+    
+    .inputs-buttons > .inputs {
+        flex: none;
+        display: flex;
+        border-right: none;
+    }
+
+    .inputs-buttons {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex: 1;
+        padding: 1em;
+    }
+    
+    .inputs-buttons > .inputs > input {
+        width: 80%;
+        padding: 0.5em;
+        border: none;
+        outline: none;
+        background-color: #35313b;
+        color: #fff;
+        margin-top: 0.5em;
+        border-radius: 5px;
+    }
+
+    .inputs-buttons > .buttons {
+        flex: 1;
+    }
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: greenyellow;
+}
+
+.yellow {
+    color: yellow;
+}

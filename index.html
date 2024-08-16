@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula IMC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="notification">
+            <span class="message">O resultado do IMC é 45</span>
+        </div>
+        <div class="box-indice">
+            <div class="title">
+                <h1>Calculadora IMC avançada</h1>
+            </div>
+            <div class="main">
+                <div class="informations">
+                    <div class="numbers">
+                        <p class="text">Menor do que 16</p>
+                        <p class="text">De 16 à 16,9</p>
+                        <p class="text">De 17 à 18,4</p>
+                        <p class="text">De 18,5 à 24,9</p>
+                        <p class="text">De 25 à 29,9</p>
+                        <p class="text">De 30 à 34,9</p>
+                        <p class="text">De 35 à 39,9</p>
+                        <p class="text">De 40 ou mais</p>
+                    </div>
+                    <div class="situation">
+                        <p class="text magreza-I">Magreza mais severa</p>
+                        <p class="text magreza-II">Maqueza severa</p>
+                        <p class="text magreza-III">Magreza moderada</p>
+                        <p class="text normal">Normal</p>
+                        <p class="text sobrepeso">Sobrepeso</p>
+                        <p class="text obesidade-I">Obesidade moderada</p>
+                        <p class="text obesidade-II">Obesidade severa</p>
+                        <p class="text obesidade-III">Obesidade mais severa</p>
+                    </div>
+                </div>
+                <div class="inputs-buttons">
+                    <div class="inputs">
+                        <label for="peso">Digite seu peso: </label>
+                        <input type="number" id="peso" class="weight" placeholder="Em Kg">
+                        <label for="altura">Digite sua altura: <i class="fa-solid fa-circle-question tooltip"
+                                title="Sua altura em centimetros é sua altura em metros x 100"></i></label>
+                        <input type="number" id="altura" class="height" placeholder="Em centimetros">
+                    </div>
+                    <div class="buttons">
+                        <button class="calc" onclick="showAlert(this)">Calcular IMC</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio class="audio" src="sounds/notification.mp3"></audio>
+</body>
+
+</html>
